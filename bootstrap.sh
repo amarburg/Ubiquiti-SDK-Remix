@@ -20,7 +20,6 @@ echo
 
 for filename in $PATCH_DIR/*.patch
 do
-   echo "Applying $filename"
    patch -p1 < $filename
 done;
 
