@@ -1,11 +1,18 @@
 
 This software has only been tested with the xS2 build for the Ministation2.
 
-The command "./bootstrap.sh" will download the Ubiquiti SDK specified at the top
-of the script and overlay it onto the software tree, patching files as appropriate.
+First 
+
+    ./bootstrap.sh
+
+to download the Ubiquiti SDK specified at the top of the script and
+overlay it onto the software tree, patching files as appropriate.
+
+Packages to include can be configured in conf/xs2/product.mk
+
 Then run:
- 
-    make  clean xs2
+
+    make clean xs2
 
 
 To build the xs2 firmware.
