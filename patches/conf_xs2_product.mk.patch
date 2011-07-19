@@ -1,17 +1,5 @@
 --- ministation_sdk/conf/xs2/product.mk	2011-03-22 20:50:52.000000000 +1300
 +++ ministation_git_pristine/conf/xs2/product.mk	2011-07-19 14:04:06.287432078 +1200
-@@ -5,6 +5,11 @@
- CONFDIR := $(BUILDDIR)/conf/current
- endif
- 
-+PACKAGEDIR := $(BUILDDIR)/packages
-+
-+$(PACKAGEDIR):
-+	mkdir -p $(PACKAGEDIR)
-+
- #
- # Architecture specifics
- #
 @@ -41,6 +46,12 @@
  #	    bird batmand wifidog
  #APPS_GPL += libpcap tcpdump iperfi

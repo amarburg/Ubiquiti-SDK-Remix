@@ -1,0 +1,12 @@
+--- SDK.UBNT.v3.6.1.4873/Makefile	2011-04-01 04:25:12.000000000 +1300
++++ ministation_sdk/Makefile	2011-07-19 19:18:38.309406548 +1200
+@@ -24,6 +24,9 @@
+ 	make -C apps all install || exit 1
+ 	make -C rootfs postinstall clean image || exit 1
+ 
++$(PACKAGEDIR):
++	mkdir -p $@
++
+ clean:
+ 	make -C drivers clean
+ 	make -C kernel clean

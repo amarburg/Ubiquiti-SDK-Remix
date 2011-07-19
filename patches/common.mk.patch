@@ -1,0 +1,21 @@
+--- SDK.UBNT.v3.6.1.4873/common.mk	2008-08-19 22:59:41.000000000 +1200
++++ ministation_sdk/common.mk	2011-07-19 19:17:51.889713980 +1200
+@@ -6,6 +6,10 @@
+ build_install_directory := $(BUILDDIR)/rootfs/ROOT
+ endif
+ 
++ifndef PACKAGEDIR
++PACKAGEDIR := $(BUILDDIR)/packages
++endif
++
+ ifndef BUILDCAPS
+ BUILDCAPS := $(CONFDIR)/BuildCaps.inc
+ endif
+@@ -13,6 +17,6 @@
+ STRIP=${build_toolchain_prefix}strip -s --remove-section=.note \
+ 	--remove-section=.comment
+ 
+-export BUILDDIR CONFDIR build_install_directory FW_INFOFILE BUILDCAPS
++export BUILDDIR CONFDIR build_install_directory FW_INFOFILE BUILDCAPS PACKAGEDIR
+ 
+ -include $(CONFDIR)/product.mk
